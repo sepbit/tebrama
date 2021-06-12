@@ -37,7 +37,7 @@ Se você não receber mensagem, deu tudo certo!
 
 ``` bash
 $ source ./env/bin/activate
-$ tebrama 
+$ tebrama SBRJ
 ```
 
 ## Testes
