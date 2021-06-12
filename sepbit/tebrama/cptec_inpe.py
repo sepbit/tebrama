@@ -59,7 +59,7 @@ def previsao(codigo):
     See http://servicos.cptec.inpe.br/XML/#req-estacoes-meteorologicas
     '''
     request = Request(
-        ' http://servicos.cptec.inpe.br/XML/estacao/' + codigo+ '/condicoesAtuais.xml',
+        'http://servicos.cptec.inpe.br/XML/estacao/' + codigo+ '/condicoesAtuais.xml',
         headers={
             'User-Agent': 'Mozilla/5.0'
         }
