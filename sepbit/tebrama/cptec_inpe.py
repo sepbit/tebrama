@@ -67,7 +67,7 @@ def previsao(codigo):
     with urlopen(request) as response:
         response = response.read()
 
-    root = ET.fromstring(response)
+    root = ET.fromstring(response.decode())
     message = 'Previsão do tempo ' + capital( codigo )
     message += '\nAtualização: ' + root.find('atualizacao').text
     message += '\nTempo: ' + root.find('tempo_desc').text
