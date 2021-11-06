@@ -1,5 +1,8 @@
 image: python:latest
 
+include:
+  - template: Security/SAST.gitlab-ci.yml
+
 variables:
   INSTANCE: "$INSTANCE"
   TOKEN: "$TOKEN"
