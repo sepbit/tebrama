@@ -21,22 +21,23 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 import sys
 import time
 from os import environ
-from sepbit.tebrama.mastodon import statuses
 from sepbit.tebrama.cptec_inpe import previsao
+from sepbit.sistamapy.statuses import Statuses
+
 
 def main():
     '''
     Entry point
     '''
-    statuses(
+    toot = Statuses(
         environ['INSTANCE'],
-        environ['TOKEN'],
-        data = {
-            'status': previsao(sys.argv[1].upper()),
-            'language': 'por',
-            'visibility': 'public'
-        }
+        environ['TOKEN']
     )
+    toot.post({
+        'status': previsao(sys.argv[1].upper()),
+        'language': 'por',
+        'visibility': 'public'
+    })
 
 if __name__ == '__main__':
     main()

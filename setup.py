@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 '''
 Tebrama - Tempo no Brasil para Mastodon
-Copyright (C) 2021 Vitor Guia
+Copyright (C) 2021-2022 Vitor Guia
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -25,7 +25,7 @@ with open('README.md', 'r') as f:
 
 setup(
     name='sepbit.tebrama',
-    version='1.0.0',
+    version='1.1.0',
     description='Tempo no Brasil para Mastodon',
     long_description=README,
     license='GPL-3.0-or-later',
@@ -37,7 +37,7 @@ setup(
     url='https://gitlab.com/sepbit/tebrama',
     packages=['sepbit.tebrama'],
     python_requires='~=3.7',
-    install_requires=['setuptools'],
+    install_requires=['setuptools', 'sepbit.sistamapy'],
     extras_require={
         'dev': ['check-manifest'],
         'test': ['coverage'],
@@ -53,7 +53,7 @@ setup(
         'Intended Audience :: Developers',
         'License :: OSI Approved :: GNU General Public License v3 \
         or later (GPLv3+)',
-        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.9',
         'Programming Language :: Python :: Implementation :: CPython',
         'Programming Language :: Python :: Implementation :: PyPy'
     ],
